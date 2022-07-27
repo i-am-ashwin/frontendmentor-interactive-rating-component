@@ -1,36 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import './App.css';
+import Rating from './components/rating';
+import Thankyou from './components/Thankyou';
 
 function App() {
   const [currentStep, setCurrentStep] = useState('initial'); // submitted
-  const [rating, setRating] = useState('');
-  // <!-- Rating state start -->
-  // How did we do?
-  // Please let us know how we did with your support request. All feedback is appreciated 
-  // to help us improve our offering!
-
-  // 1 2 3 4 5
-
-  // Submit
-
-  // <!-- Rating state end -->
-
-  // <!-- Thank you state start -->
-
-  // You selected <!-- Add rating here --> out of 5
-
-  // Thank you!
-
-  // We appreciate you taking the time to give a rating. If you ever need more support, 
-  // don’t hesitate to get in touch!
-
-  // <!-- Thank you state end -->
-
+  const [rating, setRating] = useState(0);
+  const onClickSubmit = () => {
+    if (rating === 0) {
+      return alert('Please Select a rating to continue');
+    }
+    setCurrentStep('submitted');
+  };
+  // create an array with scale and fill it with the rating values
+  const ratingScale = new Array(5).fill(true).map((_, i) => i + 1);
   return (
-<div className="container">
-</div>
-  )
+    <div className="container">
+      <AnimatePresence>
+        {currentStep === 'initial' && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <Rating ratingScale={ratingScale} rating={rating} setRating={setRating} onClickSubmit={onClickSubmit} />{' '}
+          </motion.div>
+        )}
+        {currentStep === 'submitted' && <Thankyou rating={rating} />}
+      </AnimatePresence>
+    </div>
+  );
 }
 
-export default App
+export default App;

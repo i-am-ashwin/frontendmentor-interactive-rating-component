@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
-body{
+body {
   font-family: 'Overpass', sans-serif;
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(217, 12%, 63%);
+  --mediumgrey: hsl(216, 12%, 54%);
+  --darkblue: hsl(213, 20%, 18%);
+  --darkerblue: hsl(216, 12%, 8%);
+  --darkbluebg: hsl(215, 22%, 19%);
+  background-color: var(--darkerblue);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
