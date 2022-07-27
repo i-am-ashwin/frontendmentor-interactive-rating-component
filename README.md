@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/i-am-ashwin/frontendmentor-interactive-rating-component](https://github.com/i-am-ashwin/frontendmentor-interactive-rating-component)
-- Live Site URL: [https://i-am-ashwin.github.io/frontendmentor-interactive-rating-component/](https://i-am-ashwin.github.io/frontendmentor-interactive-rating-component/)
+- Live Site URL: [https://frontendmentor-interactive-rating-component-pi.vercel.app/](https://frontendmentor-interactive-rating-component-pi.vercel.app/)
 
 ### Built with
 

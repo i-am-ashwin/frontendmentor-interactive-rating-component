@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
-import Rating from './components/rating';
+import Rating from './components/Rating';
 import Thankyou from './components/Thankyou';
 
 function App() {
